@@ -46,4 +46,34 @@ busImg.addEventListener('dblclick', (event)=>{
     busImg.src = `img/busses/${Math.ceil(Math.random()*27)}.jpg`;
 });
 
-//
+// Signup buttons, 1, 2, 3:
+
+const button1 = document.querySelector('.btn1');
+button1.addEventListener('click', (event)=>{
+    let name = prompt('What is your name?', '');
+    let listItem = document.createElement('li');
+    listItem.textContent = `${name}`;
+    listItem.style.fontSize = '2rem';
+    listItem.style.color = 'teal';
+    document.querySelector('.bus1').appendChild(listItem);
+});
+
+const button2 = document.querySelector('.btn2');
+button2.addEventListener('click', (event)=>{
+    let name = prompt('What is your name?', '');
+    let listItem = document.createElement('li');
+    listItem.textContent = `${name}`;
+    listItem.style.fontSize = '2rem';
+    listItem.style.color = 'teal';
+    document.querySelector('.bus2').appendChild(listItem);
+});
+
+const button3 = document.querySelector('.btn3');
+button3.addEventListener('click', (event)=>{
+    let name = prompt('What is your name?', '');
+    let listItem = document.createElement('li');
+    listItem.textContent = `${name}`;
+    listItem.style.fontSize = '2rem';
+    listItem.style.color = 'teal';
+    document.querySelector('.bus3').appendChild(listItem);
+});

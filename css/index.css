@@ -350,3 +350,8 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.bus1,
+.bus2,
+.bus3 {
+  padding-bottom: 2rem;
+}
