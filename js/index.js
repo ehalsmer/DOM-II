@@ -1,15 +1,20 @@
 // Your code goes here
 
-// const title = document.querySelector('.logo-heading');
-// title.addEventListener('click', (title) => {title.style.color = 'green'});
-
-
 // Uppercase welcome header, mouseenter
 const welcome = document.querySelector('.intro h2');
 welcome.addEventListener('mouseenter', (event)=>{
     welcome.textContent = welcome.textContent.toUpperCase();
     setTimeout(()=>{welcome.textContent = welcome.textContent.toLowerCase()}, 2000)
 });
+
+// mouseover images
+const image1 = document.querySelector('#bus-img')
+image1.addEventListener('mouseenter', (event)=>{
+    image1.style.opacity = '0.75';
+})
+image1.addEventListener('mouseleave', (event)=>{
+    image1.style.opacity = '1.0';
+})
 
 // Text color changes on keydown
 
