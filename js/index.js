@@ -47,6 +47,7 @@ busImg.addEventListener('dblclick', (event)=>{
 });
 
 // Signup buttons, 1, 2, 3:
+let signedUp = false;
 
 const button1 = document.querySelector('.btn1');
 button1.addEventListener('click', (event)=>{
@@ -55,7 +56,9 @@ button1.addEventListener('click', (event)=>{
     listItem.textContent = `${name}`;
     listItem.style.fontSize = '2rem';
     listItem.style.color = 'teal';
+    listItem.style.fontFamily = 'Indie Flower';
     document.querySelector('.bus1').appendChild(listItem);
+    signedUp = true;
 });
 
 const button2 = document.querySelector('.btn2');
@@ -65,7 +68,9 @@ button2.addEventListener('click', (event)=>{
     listItem.textContent = `${name}`;
     listItem.style.fontSize = '2rem';
     listItem.style.color = 'teal';
+    listItem.style.fontFamily = 'Indie Flower';
     document.querySelector('.bus2').appendChild(listItem);
+    signedUp = true;
 });
 
 const button3 = document.querySelector('.btn3');
@@ -75,5 +80,25 @@ button3.addEventListener('click', (event)=>{
     listItem.textContent = `${name}`;
     listItem.style.fontSize = '2rem';
     listItem.style.color = 'teal';
+    listItem.style.fontFamily = 'Indie Flower';
     document.querySelector('.bus3').appendChild(listItem);
+    signedUp = true;
 });
+
+// Preventing nav item clicks resetting the page:
+
+const nav = document.querySelector('.nav-container');
+nav.addEventListener('click', (event)=>{event.preventDefault()});
+
+// select event listener
+
+// Mouseleave to remind visitor to sign up for a trip
+
+const page = document.querySelector('body');
+page.addEventListener('mouseleave', (event)=>{
+    if(signedUp === false){
+        alert("Don't forget to sign up!")
+    };
+});
+
+
